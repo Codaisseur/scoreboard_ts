@@ -14,6 +14,10 @@ function compareByScore(playerA: PlayerObj, playerB: PlayerObj) {
   return playerB.score - playerA.score;
 }
 
+function compareByName(playerA: PlayerObj, playerB: PlayerObj) {
+  return playerA.name.localeCompare(playerB.name);
+}
+
 export default function Scoreboard() {
   const [players, setPlayers] = useState<PlayerObj[]>([
     { id: 1, name: "Violeta", score: 11 },
@@ -26,7 +30,7 @@ export default function Scoreboard() {
     // first "copy" the array
     [...players]
     // then sort it with the `compareByScore` callback function
-    .sort(compareByScore);
+    .sort(compareByName);
 
   return (
     <div className="Scoreboard">
