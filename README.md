@@ -5,3 +5,4 @@
 4. Mapped render of players array in local state
 5. Sorting players right before rendering them
 6. Sorting players by name instead of score
+7. Allow the user to choose whether to sort by name or score

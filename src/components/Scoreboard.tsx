@@ -19,6 +19,8 @@ function compareByName(playerA: PlayerObj, playerB: PlayerObj) {
 }
 
 export default function Scoreboard() {
+  const [sortBy, setSortBy] = useState("score"); // either "score" or "name"
+
   const [players, setPlayers] = useState<PlayerObj[]>([
     { id: 1, name: "Violeta", score: 11 },
     { id: 2, name: "Eszter", score: 14 },
@@ -30,10 +32,22 @@ export default function Scoreboard() {
     // first "copy" the array
     [...players]
     // then sort it with the `compareByScore` callback function
-    .sort(compareByName);
+    .sort(sortBy === "name" ? compareByName : compareByScore);
 
   return (
     <div className="Scoreboard">
+      <p>
+        Sort order:{" "}
+        <select
+          onChange={event => {
+            setSortBy(event.target.value);
+          }}
+          value={sortBy}
+        >
+          <option value="score">Sort by score</option>
+          <option value="name">Sort by name</option>
+        </select>
+      </p>
       <p>Player's scores:</p>
       <ul>
         {playersSorted.map(player => {
