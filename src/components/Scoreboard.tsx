@@ -1,6 +1,8 @@
 // src/components/Scoreboard.tsx
 import React from "react";
+
 import Player from "./Player";
+import AddPlayerForm from "./AddPlayerForm";
 
 export default function Scoreboard() {
   return (
@@ -12,6 +14,7 @@ export default function Scoreboard() {
         <Player name="Jeroen v2" />
         <Player name="Lisa" />
       </ul>
+      <AddPlayerForm />
     </div>
   );
 }

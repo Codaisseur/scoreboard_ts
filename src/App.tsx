@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
+
 import Scoreboard from './components/Scoreboard';
+import Title from './components/Title';
 
 function App() {
   return (
     <main>
-      <h1>Scoreboard</h1>
+      <Title />
       <Scoreboard />
     </main>
   );
