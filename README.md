@@ -9,3 +9,4 @@
 8. Added `incrementScore` callback prop
 9. Added a button to the `Player` component which calls the callback prop
 10. Wrapping `incrementScore` to get the right player's ID
+11. Implemented updating scores of players
