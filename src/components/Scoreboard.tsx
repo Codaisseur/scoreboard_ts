@@ -28,6 +28,15 @@ export default function Scoreboard() {
     { id: 4, name: "Lisa", score: 42 },
   ]);
 
+  const reset = () => {
+    setPlayers(players.map(player => {
+      return {
+        ...player,
+        score: 0
+      }
+    }));
+  };
+
   // Defining the callback function:
   const incrementScore = (id: number) => {
     const updatedPlayersArray = players.map((player) => {
@@ -66,7 +75,7 @@ export default function Scoreboard() {
         >
           <option value="score">Sort by score</option>
           <option value="name">Sort by name</option>
-        </select>
+        </select> - <button onClick={reset}>reset</button>
       </p>
       <p>Player's scores:</p>
       <ul>
