@@ -28,6 +28,11 @@ export default function Scoreboard() {
     { id: 4, name: "Lisa", score: 42 },
   ]);
 
+  // Defining the callback function:
+  const incrementScore = (/* possibly some params here */) => {
+    // something smart here
+  };
+
   const playersSorted =
     // first "copy" the array
     [...players]
@@ -56,6 +61,7 @@ export default function Scoreboard() {
               key={player.id}
               name={player.name}
               score={player.score}
+              incrementScore={incrementScore}
             />
           );
         })}

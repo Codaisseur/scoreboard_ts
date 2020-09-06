@@ -4,6 +4,7 @@ import React from "react";
 type Props = {
   name: string;
   score: number;
+  incrementScore: () => void;
 };
 
 export default function Player(props: Props) {
