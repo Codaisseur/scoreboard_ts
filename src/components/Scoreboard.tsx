@@ -29,9 +29,9 @@ export default function Scoreboard() {
   ]);
 
   // Defining the callback function:
-  const incrementScore = (/* possibly some params here */) => {
+  const incrementScore = (id: number) => {
     // something smart here
-    console.log("todo: increment score");
+    console.log("todo: increment score of player", id);
   };
 
   const playersSorted =
@@ -62,7 +62,9 @@ export default function Scoreboard() {
               key={player.id}
               name={player.name}
               score={player.score}
-              incrementScore={incrementScore}
+              incrementScore={() => {
+                incrementScore(player.id);
+              }}
             />
           );
         })}

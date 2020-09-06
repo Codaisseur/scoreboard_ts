@@ -8,3 +8,4 @@
 7. Allow the user to choose whether to sort by name or score
 8. Added `incrementScore` callback prop
 9. Added a button to the `Player` component which calls the callback prop
+10. Wrapping `incrementScore` to get the right player's ID
