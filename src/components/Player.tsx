@@ -10,7 +10,10 @@ type Props = {
 export default function Player(props: Props) {
   return (
     <li className="Player">
-      <p>{props.name} (score: {props.score})</p>
+      <p>
+        {props.name} (score: {props.score}){" "}
+        <button onClick={props.incrementScore}>increment</button>
+      </p>
     </li>
   );
 }
