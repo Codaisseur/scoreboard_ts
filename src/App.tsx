@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-import Scoreboard from './components/Scoreboard';
-import Title from './components/Title';
+import Scoreboard from "./components/Scoreboard/Scoreboard";
+import Title from "./components/Title";
 
 function App() {
   return (

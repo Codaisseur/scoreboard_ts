@@ -1,8 +1,8 @@
 // src/components/Scoreboard.tsx
 import React, { useState } from "react";
 
-import Player from "./Player";
-import AddPlayerForm from "./AddPlayerForm";
+import Player from "../Player/Player";
+import AddPlayerForm from "../AddPlayerForm";
 
 type PlayerObj = {
   id: number;
