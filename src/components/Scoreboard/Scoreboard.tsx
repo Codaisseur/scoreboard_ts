@@ -59,6 +59,12 @@ export default function Scoreboard() {
     setPlayers(updatedPlayersArray);
   };
 
+  const addPlayer = (name: string) => {
+    console.log("Let's add a new player with the name:", name);
+    const newPlayerId = Math.max(...players.map(p => p.id)) + 1;
+    setPlayers([...players, { id: newPlayerId, name, score: 0 }]);
+  };
+
   const playersSorted =
     // first "copy" the array
     [...players]
@@ -95,9 +101,7 @@ export default function Scoreboard() {
         })}
       </ul>
       <AddPlayerForm
-        addPlayer={name => {
-          console.log("Let's add a new player with the name:", name);
-        }}
+        addPlayer={addPlayer}
       />
     </div>
   );
