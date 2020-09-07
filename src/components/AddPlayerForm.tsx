@@ -24,6 +24,7 @@ export default function AddPlayerForm(props: Props) {
         <button
           onClick={() => {
             props.addPlayer(name);
+            setName("");
           }}
         >
           Add

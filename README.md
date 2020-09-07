@@ -16,3 +16,4 @@
 15. Added a controlled component (input field) in the AddPlayerForm
 16. Using the addPlayer callback prop to inform the Scoreboard to add a new player
 17. Actually adding new players
+18. Clearing the input field after adding player
