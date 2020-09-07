@@ -1,7 +1,11 @@
 // src/components/AddPlayerForm.tsx
 import React, { useState } from "react";
 
-export default function AddPlayerForm() {
+type Props = {
+  addPlayer: (name: string) => void;
+};
+
+export default function AddPlayerForm(props: Props) {
   const [name, setName] = useState("");
 
   return (
@@ -12,12 +16,18 @@ export default function AddPlayerForm() {
           type="text"
           placeholder="Name"
           value={name}
-          onChange={event => {
+          onChange={(event) => {
             console.log("new input .value:", event.target.value);
             setName(event.target.value);
           }}
         />{" "}
-        <button>Add</button>
+        <button
+          onClick={() => {
+            props.addPlayer(name);
+          }}
+        >
+          Add
+        </button>
       </p>
     </div>
   );

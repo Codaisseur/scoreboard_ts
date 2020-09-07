@@ -14,3 +14,4 @@
 13. Added Sass and fun indicator stylings
 14. Added funky styles to the score increment button
 15. Added a controlled component (input field) in the AddPlayerForm
+16. Using the addPlayer callback prop to inform the Scoreboard to add a new player
