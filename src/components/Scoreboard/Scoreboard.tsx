@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Player from "../Player/Player";
 import AddPlayerForm from "../AddPlayerForm";
 
+import "./Scoreboard.scss";
+
 type PlayerObj = {
   id: number;
   name: string;
